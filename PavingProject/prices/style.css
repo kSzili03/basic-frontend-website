@@ -1,0 +1,358 @@
+body {
+    background-color: aliceblue;
+}
+
+header {
+    display: flex;
+    color: black;
+    position: relative;
+    margin: 20px;
+    padding: 10px 40px;
+    justify-content: space-between;
+    background-color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    border-radius: 10px;
+}
+
+header .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .title-container img {
+    width: auto;
+    max-height: 30px;
+}
+
+header .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul {
+    padding: 5px;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+header nav ul li a {
+    cursor: pointer;
+    color: #C0BAB6;
+    margin: 0px 20px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #FF9900;
+}
+
+main .prices-table-container {
+    margin: 25px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #f8f8ffcf;
+    flex: 0 1 calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+main .prices-table-container h2 {
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px solid #C0BAB6;
+}
+
+main .prices-table-container table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+main .prices-table-container table caption {
+    font-size: 16px;
+}
+
+main .prices-table-container table tr {
+    border: 1px solid #ddd;
+    background-color: #f8f8ffcf;
+}
+
+main .prices-table-container table th, td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #C0BAB6;
+}
+
+main .prices-table-container table th {
+    color: #FF9900;
+    font-size: .85em;
+    letter-spacing: .1em;
+}
+
+main .prices-table-container .quality-container {
+    display: flex;
+    justify-content: center;
+}
+
+main .prices-table-container .quality-container p {
+    margin: 20px;
+}
+
+main .prices-table-container .price-request-container {
+    margin: 20px;
+    position: relative;
+}
+
+main .price-request-container button, #submitButton {
+    border: none;
+    cursor: pointer;
+    color: #C0BAB6;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #333333;
+}
+
+main .price-request-container .close-button {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333333;
+    position: absolute;
+}
+
+main .price-request-container #deleteButton {
+    color: #232323;
+    background-color: transparent;
+}
+
+main .price-request-container button:hover, #submitButton:hover, #deleteButton:hover {
+    color: #FF9900;
+}
+
+main .price-request-container .form-container {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    display: none;
+    position: fixed;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    background-color: #f8f8ffcf;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+main .price-request-container .form-container form input, form textarea {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 4px 2px;
+    color: #C0BAB6;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+main .price-request-container .form-container.active {
+    display: block;
+}
+
+main .price-request-container .close-button.active {
+    display: block;
+}
+
+footer {
+    margin: 20px;
+    margin-bottom: 0px;
+}
+
+footer .footer-list-container {
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #333333;
+    justify-content: space-between;
+}
+
+footer .footer-list-elements {
+    flex: 1;
+    margin-right: 20px;
+}
+
+footer .footer-list-elements h3, .footer-list-elements ul li {
+    color: #C0BAB6;
+    text-align: center;
+}
+
+footer .footer-list-container ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .footer-list-container ul li {
+    padding: 5px 0px;
+    border-bottom: 1px solid #C0BAB6;
+}
+
+footer .footer-list-container ul li a {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+footer .footer-list-container, .footer-copyright-container{
+    padding: 10px 40px;
+}
+
+footer .footer-copyright-container {
+    display: flex;
+    color: #C0BAB6;
+    background-color: #232323;
+    justify-content: space-between;
+}
+
+@media (max-width: 1020px) {
+
+    header {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header .title-container img {
+        padding-top: 20px;
+    }
+
+    header .nav-container {
+        margin-top: 20px;
+    }
+
+    main {
+        margin: 0px;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    body {
+        margin: 0px;
+    }
+
+    header {
+        margin: 5px 5px 10px 5px;
+    }
+
+    header .nav-container ul li a {
+        font-size: 14px;
+        margin: 0px 10px;
+    }
+
+    main {
+        margin: 5px;
+    }
+
+    footer {
+        margin: 5px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    header .nav-container ul li a {
+        font-size: 12px;
+    }
+
+    main .prices-table-container table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+}
+
+@media (max-width: 622px) {
+
+    header .nav-container ul {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header .nav-container ul li {
+        margin-bottom: 10px;
+    }
+
+    header .nav-container ul li a {
+        font-size: 16px;
+    }
+
+    main .prices-table-container {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    main .prices-table-container table {
+        border: 0;
+    }
+
+    main .prices-table-container table caption {
+        font-size: 16px;
+    }
+
+    main .prices-table-container table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    main .prices-table-container table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    main .prices-table-container table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        content: attr(data-label);
+      }
+
+      table td:last-child {
+        border-bottom: 0;
+      }
+
+    footer .footer-container .footer-list-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

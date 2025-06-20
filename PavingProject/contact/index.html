@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kapcsolat</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="title-container">
+
+            <img src="../img/home/header-logo.png" alt="header-logo">
+
+        </div>
+
+        <div class="nav-container">
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="../index.html">FŐOLDAL</a></li>
+                    <li><a href="../services/index.html">SZOLGÁLTATÁSOK</a></li>
+                    <li><a href="../references/index.html">REFERENCIA</a></li>
+                    <li><a href="../prices/index.html">ÁRAJÁNLAT</a></li>
+                    <li><a href="../contact/index.html">KAPCSOLAT</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="content-container">
+
+            <div class="contact-us-form-container">
+
+                <img src="../img/contact/contactUsFormImage.jpg" alt="contactUsFormImage">
+
+                <form id="request-form" action="#" method="post" onsubmit="return FormCheck();">
+
+                    <label for="lname">VEZETÉKNÉV:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="fname">KERESZTNÉV:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="email">EMAIL-CÍM:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="phone">TELEFONSZÁM:</label><br>
+                    <input type="text" id="phone" name="phone"><br>
+                    <label for="message">MEGJEGYZÉS:</label><br>
+                    <textarea id="message" name="message"></textarea><br>
+                    <input type="submit" id="submitButton" name="submitButton" value="Küldés">
+
+                </form>
+
+            </div>
+
+            <div class="contact-us-details-container">
+
+                <div class="detail-element">
+
+                    <i class="fa fa-phone" style="font-size:24px;"></i>
+                    <h2>Telefon</h2>
+                    <p style="font-style: italic;">0712345678</p>
+
+                </div>
+
+                <div class="detail-element">
+
+                    <i class="fa fa-institution" style="font-size:24px;"></i>
+                    <h2>Székhely</h2>
+                    <p style="font-style: italic;">Csíkszereda Első Utca, 1. Szám</p>
+
+                </div>
+
+                <div class="detail-element">
+
+                    <i class="fa fa-clock-o" style="font-size:24px;"></i>
+                    <h2>Munkaidő</h2>
+                    <p style="font-style: italic;">Hétfő - Péntek (9:00-17:00)</p>
+
+                </div>
+
+                <div class="detail-element">
+
+                    <i class="fa fa-envelope" style="font-size:24px;"></i>
+                    <h2>Email</h2>
+                    <p style="font-style: italic;">company@gmail.com</p> 
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-list-container">
+
+                <div class="footer-list-elements">
+
+                    <h3>Szolgáltatások</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+
+                <div class="footer-list-elements">
+
+                    <h3>Referencia</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+
+                <div class="footer-list-elements">
+
+                    <h3>Kapcsolat</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+                
+                <div class="footer-list-elements">
+
+                    <h3>Főoldal</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-copyright-container">
+
+                <p>Copyright 2009 - 2022 - All Rights Reserved - Domain Name</p>
+                <p>Készítette: Kovács Szilárd</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        function FormCheck() {
+
+        var lastName = document.getElementById("lname").value.trim();
+        var firstName = document.getElementById("fname").value.trim();
+        var emailAddress = document.getElementById("email").value.trim();
+        var phoneNumber = document.getElementById("phone").value.trim();
+
+        var errors = false;
+
+        if (lastName.length === 0 || lastName.length > 20) {
+            alert("A vezetéknév nem lehet üres vagy hosszabb, mint 20 karakter!");
+            errors = true;
+        }
+
+        if (firstName.length === 0 || firstName.length > 20) {
+            alert("A keresztnév nem lehet üres vagy hosszabb, mint 20 karakter!");
+            errors = true;
+        }
+
+        if (emailAddress.length === 0) {
+            alert("Az email-címet kötelezően ki kell töltenie!");
+            errors = true;
+        }
+
+        else {
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(emailAddress)) {
+                alert("Kérjük, adjon meg egy érvényes e-mail címet!");
+                errors = true;
+            }
+
+        }
+
+        if (phoneNumber.length === 0) {
+            alert("A telefonszámot kötelezően ki kell töltenie!");
+            errors = true;
+        } 
+
+        else {
+
+            var phoneNumberRegex = /^\d+$/;
+
+            if (!phoneNumberRegex.test(phoneNumber)) {
+                alert("A telefonszám csak számokat tartalmazhat!");
+                errors = true;
+            }
+
+        }
+
+        if (errors) {
+            return false;
+        }
+
+        else {
+            return true;
+        }
+
+        }
+        
+    </script>
+
+</body>
+</html>

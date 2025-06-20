@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Árajánlat</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="title-container">
+
+            <img src="../img/home/header-logo.png" alt="header-logo">
+
+        </div>
+
+        <div class="nav-container">
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="../index.html">FŐOLDAL</a></li>
+                    <li><a href="../services/index.html">SZOLGÁLTATÁSOK</a></li>
+                    <li><a href="../references/index.html">REFERENCIA</a></li>
+                    <li><a href="../prices/index.html">ÁRAJÁNLAT</a></li>
+                    <li><a href="../contact/index.html">KAPCSOLAT</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="prices-table-container">
+
+            <h2>SZOLGÁLTATÁSOK ÖSSZEHASONLÍTÁSA</h2>
+
+            <table>
+
+                <thead>
+
+                  <tr>
+
+                    <th scope="col">SZOLGÁLTATÁS</th>
+                    <th scope="col">ÁR (RON/M<sup>2</sup>)</th>
+                    <th scope="col">IDŐTARTAM (nap)</th>
+                    <th scope="col">REFERENCIÁK</th>
+
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+
+                    <td data-label="Szolgáltatás">Térkövezés</td>
+                    <td data-label="Ár (Ron/m2)">85.71</td>
+                    <td data-label="Időtartam (nap)">5</td>
+                    <td data-label="Referenciák">🟢</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td data-label="Szolgáltatás">Mélyépítés</td>
+                    <td data-label="Ár (Ron/m2)">114.29</td>
+                    <td data-label="Időtartam (nap)">7</td>
+                    <td data-label="Referenciák">🟢</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td data-label="Szolgáltatás">Betonozás</td>
+                    <td data-label="Ár (Ron/m2)">100</td>
+                    <td data-label="Időtartam (nap)">6</td>
+                    <td data-label="Referenciák">🟡</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td data-label="Szolgáltatás">Aszfaltozás</td>
+                    <td data-label="Ár (Ron/m2)">92.86</td>
+                    <td data-label="Időtartam (nap)">5</td>
+                    <td data-label="Referenciák">🟢</td>
+
+                  </tr>
+
+                  <tr>
+
+                    <td data-label="Szolgáltatás">Tereprendezés</td>
+                    <td data-label="Ár (Ron/m2)">78.57</td>
+                    <td data-label="Időtartam (nap)">4</td>
+                    <td data-label="Referenciák">🟢</td>
+
+                  </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="quality-container">
+
+                <p>🟢: Jó</p>
+                <p>🟡: Közepes</p>
+                <p>🔴: Rossz</p>
+
+            </div>
+
+            <div class="price-request-container">
+
+                <button class="request-button">KÉRJEN AJÁNLATOT MOST!</button>
+
+                <div class="form-container">
+
+                    <form id="request-form" action="#" method="post" onsubmit="return FormCheck();">
+
+                        <div class="close-button">&times;</div>
+
+                        <label for="lname">Vezetéknév:</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+                        <label for="fname">Keresztnév:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="email">E-mail:</label><br>
+                        <input type="text" id="email" name="email"><br>
+                        <label for="phone">Telefonszám:</label><br>
+                        <input type="text" id="phone" name="phone"><br>
+                        <label for="message">Megjegyzés:</label><br>
+                        <textarea id="message" name="message"></textarea><br>
+                        <input type="submit" id="submitButton" name="submitButton" value="Küldés">
+                        <input type="reset" id="deleteButton" value="Törlés">
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-list-container">
+
+                <div class="footer-list-elements">
+
+                    <h3>Szolgáltatások</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="footer-list-elements">
+
+                    <h3>Referencia</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+
+                <div class="footer-list-elements">
+
+                    <h3>Kapcsolat</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+                
+                <div class="footer-list-elements">
+
+                    <h3>Főoldal</h3>
+
+                    <ul>
+
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+    
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-copyright-container">
+
+                <p>Copyright 2009 - 2022 - All Rights Reserved - Domain Name</p>
+                <p>Készítette: Kovács Szilárd</p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $(".request-button").click(function() {
+
+                $(".form-container").addClass("active");
+
+            });
+    
+            $(".close-button").click(function() {
+
+                $(".form-container").removeClass("active");
+
+            });
+
+        });
+
+        function FormCheck() {
+
+            var lastName = document.getElementById("lname").value.trim();
+            var firstName = document.getElementById("fname").value.trim();
+            var emailAddress = document.getElementById("email").value.trim();
+            var phoneNumber = document.getElementById("phone").value.trim();
+
+            var errors = false;
+
+            if (lastName.length === 0 || lastName.length > 20) {
+                alert("A vezetéknév nem lehet üres vagy hosszabb, mint 20 karakter!");
+                errors = true;
+            }
+
+            if (firstName.length === 0 || firstName.length > 20) {
+                alert("A keresztnév nem lehet üres vagy hosszabb, mint 20 karakter!");
+                errors = true;
+            }
+
+            if (emailAddress.length === 0) {
+                alert("Az email-címet kötelezően ki kell töltenie!");
+                errors = true;
+            }
+            
+            else {
+
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailRegex.test(emailAddress)) {
+                    alert("Kérjük, adjon meg egy érvényes e-mail címet!");
+                    errors = true;
+                }
+
+            }
+
+            if (phoneNumber.length === 0) {
+                alert("A telefonszámot kötelezően ki kell töltenie!");
+                errors = true;
+            } 
+
+            else {
+
+                var phoneNumberRegex = /^\d+$/;
+
+                if (!phoneNumberRegex.test(phoneNumber)) {
+                    alert("A telefonszám csak számokat tartalmazhat!");
+                    errors = true;
+                }
+
+            }
+
+            if (errors) {
+                return false;
+            }
+
+            else {
+                return true;
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
